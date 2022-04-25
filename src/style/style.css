@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: rgba(196, 196, 196, 0.2);
+}
+
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  background-color: #C4C4C4;
+  height: 50px;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+.header__user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__cart {
+  margin-left: 21px;
+  margin-right: 21px;
+  height: 28px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.sidebar {
+  background-color: rgb(196, 196, 196);
+  list-style-type: none;
+  padding: 27px 10px;
+  margin-right: 40px;
+  margin-top: 60px;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  margin-top: 60px;
+}
+.content-brands {
+  list-style-type: none;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: -40px;
+  left: 0;
+}
+.content-brands__brand {
+  background-color: #C4C4C4;
+  display: inline;
+  padding: 13px 3px;
+  margin-right: 10px;
+}
+
+.device__img {
+  width: 150px;
+  height: 150px;
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */

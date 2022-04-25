@@ -1,56 +1,63 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import './style/style.css';
+import cart from './assets/img/shop-cart.svg'
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+        <header className="header">
+      <div className="container">
+          <div className='header__wrapper'>
+              <span className="header__logo">
+                  КупиДевайс
+              </span>
+              <div className="header__user">
+                  <div className="header__user">
+                      Админ
+                  </div>
+                  <img src={cart} alt={'cart'} className="header__cart"/>
+                  <div className="header__login">
+                      Выйти
+                  </div>
+              </div>
+          </div>
+      </div>
+        </header>
+
+            <div className="container">
+                <main className="main">
+                    <ul className="sidebar">
+                        <li className="sidebar__list">Холодильники</li>
+                        <li className="sidebar__list">Телефоны</li>
+                        <li className="sidebar__list">Стиральные машины</li>
+                        <li className="sidebar__list">Ноутбуки</li>
+                        <li className="sidebar__list">Планшеты</li>
+                    </ul>
+                    <div className="content">
+                        <ul className="content-brands">
+                            <li className="content-brands__brand">Samsung</li>
+                            <li className="content-brands__brand">Apple</li>
+                        </ul>
+                        <div className="devices">
+                            <div className="device">
+                                <img src="#" alt="device image" className="device__img"/>
+                                <div className="device-info">
+                                    <span className="device__type">
+                                    Смартфон Samsung
+                                    </span>
+                                    <div className="device-rating">
+                                        <span className="device-rating__rating">4.2</span>
+                                        <img src="#" alt="star" className="device-rating__star"/>
+                                    </div>
+                                    <span className="device__name">Galaxy a51</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
     </div>
   );
 }
