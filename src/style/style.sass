@@ -9,12 +9,16 @@ body
   margin-right: auto
 .header
   background-color: #C4C4C4
-  height: 50px
+  box-shadow: 0 1px 24px 0 rgb(0 0 0 / 14%)
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 10
   &__wrapper
     display: flex
     justify-content: space-between
     align-items: center
-    padding: 15px
     font-style: normal
     font-weight: 400
     font-size: 18px
@@ -23,25 +27,50 @@ body
     display: flex
     justify-content: space-between
     align-items: center
+    height: 50px
   &__cart
-    margin-left: 21px
-    margin-right: 21px
-    height: 28px
+    margin-left: 11px
+    margin-right: 11px
+    padding: 0 10px
+    height: 50px
+    width: 50px
+    cursor: pointer
+  &__leave
+    font-style: normal
+    font-weight: 400
+    font-size: 18px
+    line-height: 21px
+    border: none
+    background-color: transparent
+    cursor: pointer
+    height: 100%
+  &__logo
+    height: 50px
+    display: flex
+    align-items: center
 .main
   display: flex
   justify-content: space-between
   margin-right: 15px
   margin-left: 15px
+  &-container
+    margin-top: 60px
 .sidebar
   background-color: rgb(196, 196, 196)
   list-style-type: none
   padding: 27px 10px
   margin-right: 40px
-  margin-top: 60px
+  margin-top: 50px
+  align-self: flex-start
+  &__list
+    margin-bottom: 10px
+    cursor: pointer
+    &:last-child
+      margin-bottom: 0
 .content
   position: relative
   width: 100%
-  margin-top: 60px
+  margin-top: 50px
   &-brands
     list-style-type: none
     position: absolute
@@ -49,13 +78,266 @@ body
     margin: 0
     top: -40px
     left: 0
+    cursor: pointer
+    user-select: none
     &__brand
       background-color: #C4C4C4
       display: inline
       padding: 13px 3px
       margin-right: 10px
+      text-decoration: none
+      color: inherit
 .device
+  display: flex
+  flex-direction: column
+  width: 150px
+  margin-bottom: 15px
+  flex-basis: 20%
+  text-decoration: none
+  color: inherit
   &__img
     width: 150px
     height: 150px
     display: block
+    overflow: hidden
+    object-fit: cover
+  &-info
+    width: 150px
+    display: flex
+    flex-direction: column
+    font-style: normal
+    font-weight: 400
+    font-size: 14px
+    line-height: 16px
+    margin-top: 5px
+    &__wrapper
+      display: flex
+      justify-content: space-between
+  &__type
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    color: #817D7D
+  &-rating
+    display: flex
+    align-items: center
+    &__star
+      height: 13px
+  &__name
+    margin-top: 5px
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+.devices
+  display: flex
+  flex-wrap: wrap
+.error
+  color: red
+  font-size: 30px
+  text-align: center
+.feature
+  &-wrapper
+    margin-top: 30px
+  &-top
+    display: flex
+    justify-content: space-between
+  &__image
+    width: 300px
+    height: 340px
+    overflow: hidden
+    object-fit: cover
+  &__name
+    font-style: normal
+    font-weight: 400
+    font-size: 32px
+    line-height: 38px
+    margin: 20px 0
+  &-rating
+    width: 340px
+    position: relative
+    &__star
+      width: 340px
+      height: 340px
+    &__rating
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -20%)
+      font-style: normal
+      font-weight: 400
+      font-size: 48px
+      line-height: 56px
+  &-price
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    height: 340px
+    width: 400px
+    background-color: white
+    font-style: normal
+    font-weight: 400
+    font-size: 32px
+    line-height: 38px
+  &-bottom
+    &__header
+      font-style: normal
+      font-weight: 400
+      font-size: 32px
+      line-height: 38px
+      margin-bottom: 10px
+    &__features
+      list-style-type: none
+      padding: 0
+      margin: 0
+      font-style: normal
+      font-weight: 400
+      font-size: 20px
+      line-height: 23px
+    &__feature
+      padding: 10px 15px
+      &:nth-child(odd)
+        background-color: white
+
+.auth
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  overflow: auto
+  white-space: nowrap
+  text-align: center
+  font-size: 0
+  &:before
+    height: 100%
+    display: inline-block
+    vertical-align: middle
+    content: ''
+  &-container
+    width: 560px
+    background-color: #C4C4C4
+    padding: 50px
+    display: inline-block
+    white-space: normal
+    vertical-align: middle
+    text-align: left
+  &__header
+    font-style: normal
+    font-weight: 400
+    font-size: 24px
+    line-height: 28px
+    text-align: center
+    margin-top: 0
+  &__redirect
+    font-style: normal
+    font-weight: 400
+    font-size: 18px
+    line-height: 21px
+  &-bottom
+    display: flex
+    justify-content: space-between
+    margin-top: 10px
+.admin
+  margin-top: 70px
+  margin-left: 200px
+  width: 330px
+  &__button
+    width: 100%
+    margin-bottom: 25px
+    font-style: normal
+    font-weight: 400
+    font-size: 24px
+    line-height: 28px
+    padding: 18px 0
+.modal
+  &-device
+    display: flex
+    &__device
+      width: 400px
+      margin-right: 25px
+    &__feature
+      width: 400px
+    &__header
+      font-style: normal
+      font-weight: 400
+      font-size: 21px
+      line-height: 18px
+      margin: 0 0 10px
+    &__wrapper
+      display: flex
+      flex-direction: column
+      max-height: 378px
+      overflow-y: scroll
+
+.cart
+  display: flex
+  justify-content: space-between
+  margin-top: 30px
+  &-redact
+    width: calc(100% - 320px)
+  &-device
+    margin-top: 20px
+    display: flex
+    height: 170px
+    background-color: #C4C4C4
+    &__image
+      height: 170px
+      width: 150px
+      overflow: hidden
+      object-fit: cover
+      margin-right: 20px
+    &__info
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 100%
+      padding: 20px
+      flex-grow: 1
+    &__wrapper
+      display: flex
+      justify-content: space-between
+    &-counter
+      font-size: 20px
+      width: 100px
+      margin-right: 20px
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &-buy
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      &__price
+        margin-right: 20px
+        font-size: 28px
+  &-sum
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    font-size: 28px
+    width: 300px
+    height: 200px
+    padding: 20px
+    background-color: #C4C4C4
+.mass-selection
+  display: flex
+  justify-content: space-between
+  margin-right: 20px
+.counter
+  &__button
+    font-size: 20px
+    width: 30px
+    height: 30px
+    border-radius: 0
+    background-color: transparent
+    border: 1px solid black
+
+.active
+  color: white
+  user-select: none
+.tdn
+  text-decoration: none
+.ci
+  color: inherit

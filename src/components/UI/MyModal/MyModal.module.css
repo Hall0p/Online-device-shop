@@ -1,0 +1,22 @@
+.MyModal {
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 10;
+    background-color: rgb(0,0,0, 0.5);
+}
+.modalContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 560px;
+    background-color: #f3f3f3;
+    padding: 50px;
+}
+.MyModal.active {
+    display: block;
+}

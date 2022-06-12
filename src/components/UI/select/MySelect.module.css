@@ -1,0 +1,7 @@
+.MySelect {
+    appearance: none;
+    background: url('arrow-down.svg') no-repeat right;
+    background-position-x: calc(100% - 10px);
+    background-size: 12px;
+    cursor: pointer;
+}

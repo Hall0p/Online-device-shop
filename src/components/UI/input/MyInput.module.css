@@ -1,0 +1,20 @@
+.MyInput {
+    width: 100%;
+    padding: 12px 18px;
+    border: 1px solid black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: black;
+    background-color: transparent;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 10px;
+}
+.MyInput::placeholder {
+    color: inherit;
+}
+.MyInput:focus {
+    outline: none;
+}
