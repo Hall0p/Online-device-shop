@@ -56,11 +56,11 @@ body
   &-container
     margin-top: 60px
 .sidebar
+  margin: 0
   background-color: rgb(196, 196, 196)
   list-style-type: none
   padding: 27px 10px
   margin-right: 40px
-  margin-top: 50px
   align-self: flex-start
   &__list
     margin-bottom: 10px
@@ -69,32 +69,30 @@ body
       margin-bottom: 0
 .content
   position: relative
-  width: 100%
-  margin-top: 50px
+  width: 85%
   &-brands
+    display: flex
+    flex-wrap: wrap
     list-style-type: none
-    position: absolute
     padding: 0
     margin: 0
-    top: -40px
-    left: 0
     cursor: pointer
     user-select: none
+    margin-bottom: 25px
+    gap: 10px
     &__brand
       background-color: #C4C4C4
       display: inline
       padding: 13px 3px
-      margin-right: 10px
       text-decoration: none
       color: inherit
 .device
   display: flex
   flex-direction: column
   width: 150px
-  margin-bottom: 15px
-  flex-basis: 20%
   text-decoration: none
   color: inherit
+  margin: 0
   &__img
     width: 150px
     height: 150px
@@ -130,7 +128,9 @@ body
     text-overflow: ellipsis
 .devices
   display: flex
+  justify-content: space-between
   flex-wrap: wrap
+  gap: 25px
 .error
   color: red
   font-size: 30px
