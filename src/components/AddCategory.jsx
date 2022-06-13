@@ -13,6 +13,7 @@ const AddCategory = ({modalCategory, setModalCategory}) => {
   const setNewCategory = (event) => {
     event.preventDefault()
     dispatch(addCategoryAction(category))
+    setCategory([])
     setModalCategory(false)
   }
 
@@ -27,6 +28,7 @@ const AddCategory = ({modalCategory, setModalCategory}) => {
       >
         <MyInput
           onChange={event => setCategory(event.target.value)}
+          value={category}
           type='text'
           placeholder='Введите название типа'
         />

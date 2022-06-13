@@ -16,6 +16,7 @@ const AddBrand = ({modalBrand, setModalBrand}) => {
   const setNewBrand = (event) => {
     event.preventDefault()
     dispatch(addBrandAction(brand))
+    setBrand('')
     setModalBrand(false)
   }
 
@@ -30,6 +31,7 @@ const AddBrand = ({modalBrand, setModalBrand}) => {
       >
         <MyInput
           onChange={event => addBrand(event.target.value)}
+          value={brand}
           type='text'
           placeholder='Введите название бренда'
         />
